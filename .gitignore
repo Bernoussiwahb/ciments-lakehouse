@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.ipynb_checkpoints/
+logs/
+data/raw/
+data/bronze/
+data/silver/
+data/gold/
+models/*.joblib
