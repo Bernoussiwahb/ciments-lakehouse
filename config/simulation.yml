@@ -1,0 +1,151 @@
+project:
+  name: "Ciments Lakehouse Simulation"
+  version: "1.0.0"
+
+simulation:
+  start_date: "2026-01-01 00:00:00"
+  end_date: "2026-06-30 23:55:00"
+  frequency: "5min"
+  random_seed: 42
+  site_id: "SITE_SIM_01"
+
+shifts:
+  shift_1:
+    name: "SHIFT_1"
+    start_hour: 6
+    end_hour: 14
+
+  shift_2:
+    name: "SHIFT_2"
+    start_hour: 14
+    end_hour: 22
+
+  shift_3:
+    name: "SHIFT_3"
+    start_hour: 22
+    end_hour: 6
+
+equipment:
+  RAW_MILL_001:
+    equipment_type: "raw_mill"
+    nominal_capacity_tph: 100
+    normal_utilization_min: 0.70
+    normal_utilization_max: 0.95
+
+    temperature:
+      mean: 75
+      standard_deviation: 4
+
+    pressure:
+      mean: 1.8
+      standard_deviation: 0.15
+
+    vibration:
+      mean: 3.0
+      standard_deviation: 0.45
+
+    rotation_speed:
+      mean: 28
+      standard_deviation: 1.5
+
+    base_power_kw: 1800
+    production_power_coefficient: 10
+
+  KILN_001:
+    equipment_type: "rotary_kiln"
+    nominal_capacity_tph: 120
+    normal_utilization_min: 0.75
+    normal_utilization_max: 0.97
+
+    temperature:
+      mean: 950
+      standard_deviation: 25
+
+    pressure:
+      mean: 1.2
+      standard_deviation: 0.10
+
+    vibration:
+      mean: 2.2
+      standard_deviation: 0.35
+
+    rotation_speed:
+      mean: 4
+      standard_deviation: 0.2
+
+    base_power_kw: 2200
+    production_power_coefficient: 8
+
+  COOLER_001:
+    equipment_type: "clinker_cooler"
+    nominal_capacity_tph: 120
+    normal_utilization_min: 0.70
+    normal_utilization_max: 0.96
+
+    temperature:
+      mean: 180
+      standard_deviation: 12
+
+    pressure:
+      mean: 1.6
+      standard_deviation: 0.12
+
+    vibration:
+      mean: 2.8
+      standard_deviation: 0.40
+
+    rotation_speed:
+      mean: 18
+      standard_deviation: 1
+
+    base_power_kw: 900
+    production_power_coefficient: 5
+
+  CEMENT_MILL_001:
+    equipment_type: "cement_mill"
+    nominal_capacity_tph: 90
+    normal_utilization_min: 0.68
+    normal_utilization_max: 0.94
+
+    temperature:
+      mean: 105
+      standard_deviation: 7
+
+    pressure:
+      mean: 2.0
+      standard_deviation: 0.18
+
+    vibration:
+      mean: 3.4
+      standard_deviation: 0.50
+
+    rotation_speed:
+      mean: 30
+      standard_deviation: 1.7
+
+    base_power_kw: 2000
+    production_power_coefficient: 12
+
+data_quality:
+  missing_value_rate: 0.005
+  duplicate_rate: 0.002
+  impossible_value_rate: 0.001
+
+anomalies:
+  enabled: true
+  global_rate: 0.02
+
+  available_types:
+    - "ENERGY_OVERCONSUMPTION"
+    - "PRODUCTION_DROP"
+    - "OVERHEATING"
+    - "EXCESSIVE_VIBRATION"
+    - "PRESSURE_DROP"
+    - "SENSOR_STUCK"
+    - "REPEATED_MICRO_STOPS"
+    - "ENERGY_DRIFT"
+
+output:
+  raw_directory: "data/raw"
+  reference_directory: "data/reference"
+  labels_directory: "data/labels"

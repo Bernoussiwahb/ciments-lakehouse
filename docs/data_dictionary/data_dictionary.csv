@@ -1,0 +1,52 @@
+table_name,column_name,data_type,unit,required,description
+equipment,equipment_id,string,,yes,Identifiant unique de l'équipement
+equipment,equipment_name,string,,yes,Nom de l'équipement simulé
+equipment,equipment_type,string,,yes,Type d'équipement
+equipment,site_id,string,,yes,Identifiant du site fictif
+equipment,workshop_id,string,,yes,Identifiant de l'atelier
+equipment,nominal_capacity_tph,float,tonnes/hour,yes,Capacité nominale simulée
+equipment,installation_date,date,,no,Date d'installation fictive
+equipment,status,string,,yes,Statut administratif de l'équipement
+industrial_measurements,measurement_id,string,,yes,Identifiant unique de la mesure
+industrial_measurements,timestamp,datetime,,yes,Date et heure de la mesure
+industrial_measurements,site_id,string,,yes,Identifiant du site fictif
+industrial_measurements,workshop_id,string,,yes,Identifiant de l'atelier
+industrial_measurements,equipment_id,string,,yes,Identifiant de l'équipement
+industrial_measurements,shift,string,,yes,Équipe de travail simulée
+industrial_measurements,operating_state,string,,yes,État de fonctionnement
+industrial_measurements,production_rate_tph,float,tonnes/hour,yes,Débit de production
+industrial_measurements,production_tonnes,float,tonnes/5min,yes,Quantité produite sur cinq minutes
+industrial_measurements,capacity_utilization_pct,float,percent,no,Taux d'utilisation de la capacité
+industrial_measurements,electrical_power_kw,float,kW,yes,Puissance électrique moyenne
+industrial_measurements,electrical_energy_kwh,float,kWh/5min,yes,Énergie électrique consommée
+industrial_measurements,thermal_energy_mj,float,MJ/5min,no,Énergie thermique simulée
+industrial_measurements,specific_energy_kwh_t,float,kWh/tonne,no,Consommation électrique spécifique
+industrial_measurements,temperature_c,float,celsius,yes,Température simulée
+industrial_measurements,pressure_bar,float,bar,yes,Pression simulée
+industrial_measurements,vibration_mm_s,float,mm/s,yes,Niveau de vibration
+industrial_measurements,current_ampere,float,A,yes,Intensité électrique
+industrial_measurements,rotation_speed_rpm,float,rpm,yes,Vitesse de rotation
+industrial_measurements,alarm_count,integer,count,yes,Nombre d'alarmes
+industrial_measurements,source_system,string,,yes,Système source
+industrial_measurements,ingestion_timestamp,datetime,,yes,Date et heure d'ingestion
+industrial_measurements,data_quality_status,string,,yes,État de qualité
+industrial_measurements,has_missing_value,boolean,,yes,Présence d'une valeur manquante
+industrial_measurements,is_duplicate,boolean,,yes,Indique une ligne dupliquée
+downtime_events,downtime_id,string,,yes,Identifiant de l'arrêt
+downtime_events,equipment_id,string,,yes,Équipement concerné
+downtime_events,start_time,datetime,,yes,Début de l'arrêt
+downtime_events,end_time,datetime,,yes,Fin de l'arrêt
+downtime_events,duration_minutes,integer,minutes,yes,Durée de l'arrêt
+downtime_events,downtime_type,string,,yes,Arrêt planifié ou non planifié
+downtime_events,reason_code,string,,yes,Cause simulée
+downtime_events,severity,string,,yes,Niveau de gravité
+downtime_events,description,string,,no,Description de l'arrêt
+anomaly_labels,anomaly_id,string,,yes,Identifiant de l'anomalie
+anomaly_labels,equipment_id,string,,yes,Équipement concerné
+anomaly_labels,start_time,datetime,,yes,Début de l'anomalie
+anomaly_labels,end_time,datetime,,yes,Fin de l'anomalie
+anomaly_labels,anomaly_type,string,,yes,Type d'anomalie injectée
+anomaly_labels,severity,string,,yes,Niveau de gravité
+anomaly_labels,injected_value_pct,float,percent,no,Pourcentage de modification injecté
+anomaly_labels,description,string,,no,Description
+anomaly_labels,is_anomaly,integer,,yes,Vérité terrain

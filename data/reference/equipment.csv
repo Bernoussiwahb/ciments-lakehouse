@@ -1,0 +1,5 @@
+﻿equipment_id,equipment_name,equipment_type,site_id,workshop_id,nominal_capacity_tph,installation_date,status
+RAW_MILL_001,Broyeur cru simulé,raw_mill,SITE_SIM_01,WORKSHOP_RAW_MILL,100,2020-01-01,ACTIVE
+KILN_001,Four rotatif simulé,rotary_kiln,SITE_SIM_01,WORKSHOP_KILN,120,2019-06-15,ACTIVE
+COOLER_001,Refroidisseur clinker simulé,clinker_cooler,SITE_SIM_01,WORKSHOP_COOLER,120,2020-03-10,ACTIVE
+CEMENT_MILL_001,Broyeur ciment simulé,cement_mill,SITE_SIM_01,WORKSHOP_CEMENT_MILL,90,2021-02-20,ACTIVE
