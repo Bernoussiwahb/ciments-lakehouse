@@ -9,3 +9,4 @@ data/bronze/
 data/silver/
 data/gold/
 models/*.joblib
+docs/reports/
