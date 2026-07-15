@@ -10,3 +10,4 @@ data/silver/
 data/gold/
 models/*.joblib
 docs/reports/
+data/labels/
