@@ -11,3 +11,4 @@ data/gold/
 models/*.joblib
 docs/reports/
 data/labels/
+models/isolation_forest/
